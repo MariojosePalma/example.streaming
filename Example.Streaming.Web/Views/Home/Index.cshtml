@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h5>Upload Example (To Azure Cloud Storage)</h5>
+<hr />
+@using (Html.BeginForm("UploadFile", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.TextBox("file", "", new { type = "file" })
+    <input type="submit" value="Upload" />
+}  
